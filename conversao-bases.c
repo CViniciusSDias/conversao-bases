@@ -39,24 +39,24 @@ int main(void)
       scanf("%d", &decimal);
       break;
     case 3:
-        printf("Digite o valor em hexadecimal:\n");
-        char hexa[20];
-        setbuf(stdin, NULL);
-        fgets(hexa, 20, stdin);
-        setbuf(stdin, NULL);
-        decimal = hexaParaDecimal(hexa);
+      printf("Digite o valor em hexadecimal:\n");
+      char hexa[20];
+      setbuf(stdin, NULL);
+      fgets(hexa, 20, stdin);
+      setbuf(stdin, NULL);
+      decimal = hexaParaDecimal(hexa);
       break;
     case 4:
       printf("Digite o valor em octal:\n");
       char octal[20];
-        setbuf(stdin, NULL);
-        fgets(octal, 20, stdin);
-        setbuf(stdin, NULL);
-        decimal = octalParaDecimal(octal);
+      setbuf(stdin, NULL);
+      fgets(octal, 20, stdin);
+      setbuf(stdin, NULL);
+      decimal = octalParaDecimal(octal);
       break;
     case 5:
-    printf("\nSaindo...\n");
-    exit(0);
+      printf("\nSaindo...\n");
+      exit(0);
   }
 
   printf("Número em binário: %s\n", decimalParaBase(decimal, 2));
