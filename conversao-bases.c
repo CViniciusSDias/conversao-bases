@@ -33,30 +33,30 @@ int main(void)
       setbuf(stdin, NULL);
       decimal = binarioParaDecimal(binario);
       break;
-	case 2:
-	  printf("Digite o valor em decimal:\n");
-	  setbuf(stdin, NULL);
-	  scanf("%d", &decimal);
-	  break;
-	case 3:
+  case 2:
+    printf("Digite o valor em decimal:\n");
+    setbuf(stdin, NULL);
+    scanf("%d", &decimal);
+    break;
+  case 3:
       printf("Digite o valor em hexadecimal:\n");
       char hexa[20];
       setbuf(stdin, NULL);
       fgets(hexa, 20, stdin);
       setbuf(stdin, NULL);
       decimal = hexaParaDecimal(hexa);
-	  break;
-	case 4:
-	  printf("Digite o valor em octal:\n");
-	  char octal[20];
+    break;
+  case 4:
+    printf("Digite o valor em octal:\n");
+    char octal[20];
       setbuf(stdin, NULL);
       fgets(octal, 20, stdin);
       setbuf(stdin, NULL);
       decimal = octalParaDecimal(octal);
-	  break;
-	case 5:
-	  printf("\nSaindo...\n");
-	  exit(0);
+    break;
+  case 5:
+    printf("\nSaindo...\n");
+    exit(0);
   }
 
   printf("Número em binário: %s\n", decimalParaBase(decimal, 2));
@@ -125,8 +125,8 @@ char* decimalParaBase(int valorEmDecimal, int baseDestino)
     int tamanho = strlen(valorNaBaseDestino);
     resultado = valorOriginal / baseDestino;
     int resto = valorOriginal % baseDestino;
-	
-	sprintf(valorNaBaseDestino, "%s%c", valorNaBaseDestino, valorEmNumeroOuLetra(resto));
+  
+  sprintf(valorNaBaseDestino, "%s%c", valorNaBaseDestino, valorEmNumeroOuLetra(resto));
     
     valorOriginal = resultado;
   } while (resultado >= baseDestino);
